@@ -1,0 +1,41 @@
+1.Find out maximum salary from employee table?
+
+select max(salary) from employees
+
+2.Find out minimum salary from employee table?
+
+select min(salary) from employees
+
+3.Find out maximum salary,minimum salary,average salary from employees table?
+
+select min(salary),max(salary),sum(salary),avg(salary),count(salary) from employees
+
+4.Find out  average commision_pct from employees table?
+ 
+select avg (nvl (commission_pct,0)) from employees
+
+5.Find out the average commission_pct from employees?
+
+select sum(commission_pct)/107 from employees
+
+select sum(salary) from employees where first_name like 'S%'
+
+1.Display first_name and maximum salary form employees table?
+
+select first_name,max(salary) from employees[evabe likhle vul hobe]
+
+select department_id, avg(salary) from employees group by department_id
+
+2.Display department wise  maximum salary and sort the result in asc order of department
+
+select department_id,max(salary) from employees group by department_id order by department_id asc
+
+3.Display department wise maximum salary whose maximum salary is more than 10000
+
+select department_id,max(salary) from employees having max(salary)>=10000 group by department_id
+
+4.Display department wise  maximum salary whose maximum salary is more than 10000 and whose department_id is not 30
+
+select department_id,max(salary) from employees having max(salary)>=10000 and department_id!=30 group by department_id
+
+select department_id,max(salary) from employees  where department_id!=30 having max(salary)>10000 group by department_id order by department_id asc
